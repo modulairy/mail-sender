@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: mail-sender
+Version: 0.0.1
+Summary: This script enables sending emails asynchronously from Azure Service Bus. Each bus message contains a sender's email address along with SMTP configurations. The script utilizes its SMTP configuration of the message for sending emails.
+Home-page: UNKNOWN
+Author: Fatih Mehmet ARSLAN
+Author-email: contact@fmarslan.com
+License: UNKNOWN
+Description: ## Mail Sender
+        
+        This script enables sending emails asynchronously from Azure Service Bus. Each bus message contains a sender's email address along with SMTP configurations. The script utilizes its SMTP configuration of the message for sending emails.
+        
+        ### Parameters (OS Environments)
+        |Name| Description|
+        |-- |-- |
+        |SERVICEBUS_CONNECTION_STR| Connection String for your Azure service bus instance |
+        |SERVICEBUS_QUEUE_NAME| Queue name for email listening. |
+        
+        
+        ### Model
+        ```json
+        {
+            "sender":"<Your Mail Address>",
+            "receiver":"<Recevier Address>",
+            "bcc":"<BCC Address>",
+            "cc":"<CC Address>",
+            "subject":"test",
+            "message":"<This is a <strong>TEST</strong> mail.",
+            "smtp":{
+                "server":"<SMTP Server Host>",
+                "port":"<SMTP Server PORT>",
+                "username":"<Your Mail Address>",
+                "password":"<Your Mail Password>"
+            }
+        
+        }
+        ```
+        
+        > **NOTE:** If you send email to multiple addresses, you can join with a comma(,) these mail addresses
+Platform: all
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >3.6.*, <4
+Description-Content-Type: text/markdown
