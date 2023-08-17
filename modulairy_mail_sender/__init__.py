@@ -31,17 +31,19 @@ async def run(loop,logger=None):
 async def send_email(mail):
     try:
         async with aiosmtplib.SMTP(hostname=mail["smtp"]["server"], port=mail["smtp"]["port"]) as smtp:
-            print(f"sending mail ... [{mail['sender']}]")
-            email = MIMEMultipart('alternative')
-            email["From"] = mail['sender']
-            email["To"] = mail['receiver']
-            if('bcc' in mail and mail['bcc']):
-                email["BCC"] = mail['bcc']
-            if('cc' in mail and mail['cc']):
-                email["CC"] = mail['cc']
-            email["Subject"] = mail['subject']
-            email.attach(MIMEText(mail['message'], "html"))
-            await aiosmtplib.send(email, hostname=mail["smtp"]["server"], port=mail["smtp"]["port"],username=mail["smtp"]["username"],password=mail["smtp"]["password"])
-
+            try:
+                print(f"sending mail ... [{mail['sender']}]")
+                email = MIMEMultipart('alternative')
+                email["From"] = mail['sender']
+                email["To"] = mail['receiver']
+                if('bcc' in mail and mail['bcc']):
+                    email["BCC"] = mail['bcc']
+                if('cc' in mail and mail['cc']):
+                    email["CC"] = mail['cc']
+                email["Subject"] = mail['subject']
+                email.attach(MIMEText(mail['message'], "html"))
+                await aiosmtplib.send(email, hostname=mail["smtp"]["server"], port=mail["smtp"]["port"],username=mail["smtp"]["username"],password=mail["smtp"]["password"])
+            except Exception as e:
+                print("Error:", e)
     except Exception as e:
         print("Error:", e)
