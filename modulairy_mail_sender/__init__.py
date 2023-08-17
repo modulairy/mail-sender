@@ -12,21 +12,21 @@ QUEUE_NAME = os.environ["SERVICEBUS_QUEUE_NAME"]
 
 async def run(loop,logger=None):
     servicebus_client = ServiceBusClient.from_connection_string(conn_str=CONNECTION_STR)
-    #while True:
-    #    print("waiting message...")
-    async with servicebus_client:
-        receiver = servicebus_client.get_queue_receiver(queue_name=QUEUE_NAME)
-        async with receiver:
-            received_msgs = await receiver.receive_messages(max_message_count=10, max_wait_time=1)
-            for msg in received_msgs:
-                mail = {}
-                try:
-                    mail = json.loads(str(msg))
-                except:
-                    print(str(msg))
-                    continue;
-                asyncio.create_task(send_email(mail))
-                await receiver.complete_message(msg)
+    while True:
+        print("waiting message...")
+        async with servicebus_client:
+            receiver = servicebus_client.get_queue_receiver(queue_name=QUEUE_NAME)
+            async with receiver:
+                received_msgs = await receiver.receive_messages(max_message_count=10, max_wait_time=1)
+                for msg in received_msgs:
+                    mail = {}
+                    try:
+                        mail = json.loads(str(msg))
+                    except:
+                        print(str(msg))
+                        continue;
+                    asyncio.create_task(send_email(mail))
+                    await receiver.complete_message(msg)
 
 async def send_email(mail):
     try:
