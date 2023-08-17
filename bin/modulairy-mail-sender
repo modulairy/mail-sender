@@ -4,7 +4,7 @@ import asyncio
 import logging
 import os
 
-from ma_mail_sender import run
+from modulairy_mail_sender import run
 
 logger = logging.getLogger("ma-mail-sender")
 logger.setLevel(os.environ.get('LOG_LEVEL', "DEBUG"))

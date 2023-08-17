@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(
-    name="ma-mail-sender",
+    name="modulairy-mail-sender",
     version="0.0.1",
     author="Fatih Mehmet ARSLAN",
     author_email="contact@fmarslan.com",
@@ -24,6 +24,6 @@ setuptools.setup(
     ],
     install_requires=["aiosmtplib","azure-servicebus"],
     python_requires=">=3.8, <4",
-    packages=['ma_mail_sender'],
-    scripts=['bin/ma-mail-sender']
+    packages=['modulairy_mail_sender'],
+    scripts=['bin/modulairy-mail-sender']
 )
