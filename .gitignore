@@ -1,4 +1,5 @@
 env/
+envlinux/
 dist/
 build/
 *.egg-info

@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="modulairy-mail-sender",
-    version="0.0.2",
+    version="0.0.2.2",
     author="Fatih Mehmet ARSLAN",
     author_email="contact@fmarslan.com",
     description="This script enables sending emails asynchronously from Azure Service Bus. Each bus message contains a sender's email address along with SMTP configurations. The script utilizes its SMTP configuration of the message for sending emails.",
@@ -25,5 +25,5 @@ setuptools.setup(
     install_requires=["aiosmtplib","azure-servicebus"],
     python_requires=">=3.8, <4",
     packages=['modulairy_mail_sender'],
-    scripts=['bin/modulairy-mail-sender']
+    scripts=['bin/modulairy_mail_sender']
 )
