@@ -39,6 +39,8 @@ jobs:
 
   docker:
     name: Deploy to Docker Hub
+    needs: deploy_to_pypi
+    if: ${{ success()}}
     runs-on: ubuntu-latest
     steps:
       -
