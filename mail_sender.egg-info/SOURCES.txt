@@ -1,9 +1,0 @@
-README.md
-setup.py
-bin/mail-sender
-mail_sender/__init__.py
-mail_sender.egg-info/PKG-INFO
-mail_sender.egg-info/SOURCES.txt
-mail_sender.egg-info/dependency_links.txt
-mail_sender.egg-info/requires.txt
-mail_sender.egg-info/top_level.txt
