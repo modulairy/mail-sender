@@ -25,7 +25,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3.8"
     ],
     install_requires=["aiosmtplib","azure-servicebus"],
-    python_requires=">3.6.*, <4",
+    python_requires=">=3.6.*",
     packages=['mail_sender'],
     scripts=['bin/mail-sender']
 )
