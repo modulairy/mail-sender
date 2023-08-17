@@ -6,9 +6,10 @@ setuptools.setup(
     author="Fatih Mehmet ARSLAN",
     author_email="contact@fmarslan.com",
     description="This script enables sending emails asynchronously from Azure Service Bus. Each bus message contains a sender's email address along with SMTP configurations. The script utilizes its SMTP configuration of the message for sending emails.",
-    long_description=open("Readme.md").read(),
+    long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     platforms="all",
+    url="https://github.com/modulairy/mail-sender",
     classifiers=[
         "License :: OSI Approved :: Apache Software License",
         "Topic :: Internet",
@@ -19,9 +20,6 @@ setuptools.setup(
         "Operating System :: POSIX",
         "Operating System :: Microsoft",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8"
     ],
     install_requires=["aiosmtplib","azure-servicebus"],
