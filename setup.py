@@ -6,7 +6,7 @@ setuptools.setup(
     author="Fatih Mehmet ARSLAN",
     author_email="contact@fmarslan.com",
     description="This script enables sending emails asynchronously from Azure Service Bus. Each bus message contains a sender's email address along with SMTP configurations. The script utilizes its SMTP configuration of the message for sending emails.",
-    long_description=open("Readme.md").read(),
+    long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     platforms="all",
     classifiers=[
