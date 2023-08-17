@@ -27,9 +27,16 @@ This script enables sending emails asynchronously from Azure Service Bus. Each b
 
 }
 ```
+### Installation
 
 ```sh
-ma-mail-sender
+pip install modulairy-mail-sender
+```
+
+### Run
+
+```sh
+python -m modulairy-mail-sender
 ```
 
 > **NOTE:** If you send email to multiple addresses, you can join with a comma(,) these mail addresses
