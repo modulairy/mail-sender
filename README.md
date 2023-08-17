@@ -1,4 +1,4 @@
-## Mail Sender
+## Modulairy Mail Sender
 
 This script enables sending emails asynchronously from Azure Service Bus. Each bus message contains a sender's email address along with SMTP configurations. The script utilizes its SMTP configuration of the message for sending emails.
 
@@ -26,6 +26,10 @@ This script enables sending emails asynchronously from Azure Service Bus. Each b
     }
 
 }
+```
+
+```sh
+ma-mail-sender
 ```
 
 > **NOTE:** If you send email to multiple addresses, you can join with a comma(,) these mail addresses
