@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="modulairy-mail-sender",
-    version="0.0.2.3",
+    version="0.0.2.5",
     author="Fatih Mehmet ARSLAN",
     author_email="contact@fmarslan.com",
     description="This script enables sending emails asynchronously from Azure Service Bus. Each bus message contains a sender's email address along with SMTP configurations. The script utilizes its SMTP configuration of the message for sending emails.",
